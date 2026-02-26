@@ -25,7 +25,7 @@ For the backend implementation, I built a console application structured around 
 * **Structure:** Separated the code into Domain Models, Business Logic (Services), and Data Access (Repositories) using interfaces.
 * **Dependency Injection:** The `OrderService` uses interfaces (`IDiscountService`, `IOrderRepository`) instead of concrete implementations, making the code easier to test and maintain.
 * **Data Types:** Used the `decimal` type for all money-related properties (prices, totals) to ensure precise financial calculations and avoid floating-point rounding errors.
-* **Data Processing (LINQ):** * Used `GroupBy`, `Sum`, and `OrderByDescending` to dynamically find the top-spending customer.
+* **Data Processing** Used `GroupBy`, `Sum`, and `OrderByDescending` to dynamically find the top-spending customer.
   * For the bonus requirement, used `SelectMany` to flatten the order items and aggregated them into a `Dictionary` to count the most popular products.
 
 ### Execution Output
