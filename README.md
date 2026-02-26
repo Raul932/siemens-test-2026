@@ -16,4 +16,3 @@ This repository contains my practical solutions for the internship selection pro
 * I normalized the database to handle the relationships efficiently and ensure data integrity.
 * To resolve the many-to-many relationship between the items ordered and the extras added (e.g., one drink can have multiple syrups, and a specific syrup can be added to multiple drinks), I introduced a junction table called `OrderItem_Extra` using a composite primary key.
 * Customer membership status is stored as a simple boolean (`IsGoldMember`) rather than a string, to optimize storage and query performance.
-* For this specific schema, I chose a "Docs-as-Code" approach using Mermaid.js. It allows for easy version control of the database architecture, which aligns perfectly with DevOps practices.
