@@ -44,10 +44,24 @@ namespace SieMarket.Services
                     // 2. Calculate total sum for this customer
                     TotalSpent = group.Sum(order => CalculateFinalPrice(order)) 
                 })
-                .OrderByDescending(customer => customer.TotalSpent) // 3. Sorting decreasing
+                .OrderByDescending(customer => customer.TotalSpent) // 3. Sort decreasing
                 .FirstOrDefault(); // 4. We get the first one
 
             return topCustomer?.CustomerName;
+        }
+        //2.4
+        public Dictionary<string, int> GetPopularProducts()
+        {
+            var allOrders = _orderRepository.GetAll();
+
+            return allOrders
+                .SelectMany(order => order.Items) // 1. Put all items from all orders together
+                .GroupBy(item => item.ProductName) // 2. Group them by their name
+                .OrderByDescending(group => group.Sum(item => item.Quantity)) // 3. Sort decreasing by quantity sold
+                .ToDictionary(
+                    group => group.Key,                       // The key will be the name
+                    group => group.Sum(item => item.Quantity) // Value will be total quantity
+                );
         }
 
         public void ProcessAndSaveOrder(Order order)
