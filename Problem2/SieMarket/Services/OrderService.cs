@@ -14,21 +14,47 @@ namespace SieMarket.Services
             _orderRepository = orderRepository;
             _discountService = discountService;
         }
-
-        public decimal ProcessOrder(Order order)
+        //2.2 solution
+        public decimal CalculateFinalPrice(Order order)
         {
-            //we calculate the subtotal
+            // calculate the subtotal
             decimal subtotal = order.Items.Sum(item => item.TotalPrice);
-            //then the discount
+
+            // calculate the discount
             decimal discount = _discountService.CalculateDiscount(order, subtotal);
 
-            //the final
-            decimal finalTotal = subtotal - discount;
+            // return the final price
+            return subtotal - discount;
+        }
+        //2.3
+        public string GetTopSpenderName()
+        {
+            var allOrders = _orderRepository.GetAll();
 
-            //after that, we save the order
+            if (!allOrders.Any())
+            {
+                return "No orders found."; // if empty
+            }
+
+            var topCustomer = allOrders
+                .GroupBy(order => order.CustomerName) // 1. Group by client
+                .Select(group => new 
+                {
+                    CustomerName = group.Key,
+                    // 2. Calculate total sum for this customer
+                    TotalSpent = group.Sum(order => CalculateFinalPrice(order)) 
+                })
+                .OrderByDescending(customer => customer.TotalSpent) // 3. Sorting decreasing
+                .FirstOrDefault(); // 4. We get the first one
+
+            return topCustomer?.CustomerName;
+        }
+
+        public void ProcessAndSaveOrder(Order order)
+        {
+            decimal finalPrice = CalculateFinalPrice(order);
             _orderRepository.Save(order);
-
-            return finalTotal;
+            System.Console.WriteLine($"[OrderService] Order for {order.CustomerName} processed. Final Price: {finalPrice}€");
         }
     }
 }

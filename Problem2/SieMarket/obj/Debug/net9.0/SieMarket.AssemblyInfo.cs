@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SieMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8daa72134a5aa249ba24842907c4b7047088199")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5da1644e84e52c6b12bc7090d4a20fb756f7cee0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SieMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SieMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

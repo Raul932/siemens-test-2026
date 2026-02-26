@@ -10,12 +10,12 @@ namespace SieMarket.Models
         public DateTime OrderDate {get; set; } = DateTime.UtcNow;
         public List<OrderItem> Items {get; set; } = new List<OrderItem>();
 
-        public Order(string CustomerName)
+        public Order(string customerName)
         {
-            if (string.IsNullOrWhiteSpace(CustomerName))
+            if (string.IsNullOrWhiteSpace(customerName))
                 throw new ArgumentException("Name required");
 
-            CustomerName = CustomerName;
+            CustomerName = customerName;
         }
 
     }

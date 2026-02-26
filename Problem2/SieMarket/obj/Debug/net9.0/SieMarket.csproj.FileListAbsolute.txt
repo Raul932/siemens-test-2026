@@ -1,0 +1,15 @@
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\bin\Debug\net9.0\SieMarket.exe
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\bin\Debug\net9.0\SieMarket.deps.json
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\bin\Debug\net9.0\SieMarket.runtimeconfig.json
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\bin\Debug\net9.0\SieMarket.dll
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\bin\Debug\net9.0\SieMarket.pdb
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.AssemblyInfoInputs.cache
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.AssemblyInfo.cs
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.csproj.CoreCompileInputs.cache
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.sourcelink.json
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.dll
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\refint\SieMarket.dll
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.pdb
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\SieMarket.genruntimeconfig.cache
+C:\Users\parau\OneDrive\Desktop\siemens-test-2026\Problem2\SieMarket\obj\Debug\net9.0\ref\SieMarket.dll
